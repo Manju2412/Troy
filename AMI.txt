@@ -1,0 +1,107 @@
+aws ec2 run-instances --image-id ami-f3ac5e8b --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-594ca524 --subnet-id subnet-0558924d
+        {
+            "Instances": [
+                {
+                    "Monitoring": {
+                        "State": "disabled"
+                    },
+                    "PublicDnsName": "",
+                    "State": {
+                        "Code": 16,
+                        "Name": "running"
+                    },
+                    "EbsOptimized": false,
+                    "LaunchTime": "2017-09-16T21:06:53.000Z",
+                    "PrivateIpAddress": "10.0.0.96",
+                    "ProductCodes": [],
+                    "VpcId": "vpc-57513531",
+                    "StateTransitionReason": "",
+                    "InstanceId": "i-04c3d6c5da62dfa7d",
+                    "EnaSupport": true,
+                    "ImageId": "ami-f3ac5e8b",
+                    "PrivateDnsName": "ip-10-0-0-96.us-west-2.compute.internal",
+                    "KeyName": "PuttyPublicKey",
+                    "SecurityGroups": [
+                        {
+                            "GroupName": "launch-wizard-1",
+                            "GroupId": "sg-594ca524"
+                        }
+                    ],
+                    "ClientToken": "oewzz1505596013115",
+                    "SubnetId": "subnet-0558924d",
+                    "InstanceType": "t2.micro",
+                    "NetworkInterfaces": [
+                        {
+                            "Status": "in-use",
+                            "MacAddress": "06:00:b7:30:9a:1c",
+                            "SourceDestCheck": true,
+                            "VpcId": "vpc-57513531",
+                            "Description": "Primary network interface",
+                            "NetworkInterfaceId": "eni-b01d5081",
+                            "PrivateIpAddresses": [
+                                {
+                                    "PrivateDnsName": "ip-10-0-0-96.us-west-2.compute.internal",
+                                    "Primary": true,
+                                    "PrivateIpAddress": "10.0.0.96"
+                                }
+                            ],
+                            "PrivateDnsName": "ip-10-0-0-96.us-west-2.compute.internal",
+                            "Attachment": {
+                                "Status": "attached",
+                                "DeviceIndex": 0,
+                                "DeleteOnTermination": true,
+                                "AttachmentId": "eni-attach-1606f4f4",
+                                "AttachTime": "2017-09-16T21:06:53.000Z"
+                            },
+                            "Groups": [
+                                {
+                                    "GroupName": "launch-wizard-1",
+                                    "GroupId": "sg-594ca524"
+                                }
+                            ],
+                            "Ipv6Addresses": [],
+                            "OwnerId": "904748804247",
+                            "SubnetId": "subnet-0558924d",
+                            "PrivateIpAddress": "10.0.0.96"
+                        }
+                    ],
+                    "SourceDestCheck": true,
+                    "Placement": {
+                        "Tenancy": "default",
+                        "GroupName": "",
+                        "AvailabilityZone": "us-west-2b"
+                    },
+                    "Hypervisor": "xen",
+                    "BlockDeviceMappings": [
+                        {
+                            "DeviceName": "/dev/sda1",
+                            "Ebs": {
+                                "Status": "attached",
+                                "DeleteOnTermination": true,
+                                "VolumeId": "vol-00b680fa6591f70d8",
+                                "AttachTime": "2017-09-16T21:06:54.000Z"
+                            }
+                        }
+                    ],
+                    "Architecture": "x86_64",
+                    "RootDeviceType": "ebs",
+                    "RootDeviceName": "/dev/sda1",
+                    "VirtualizationType": "hvm",
+                    "Tags": [
+                        {
+                            "Value": "Private Instance AMS CLI",
+                            "Key": "Name"
+                        }
+                    ],
+                    "AmiLaunchIndex": 0
+                }
+            ],
+            "ReservationId": "r-073234f91956c0ea9",
+            "Groups": [],
+            "OwnerId": "904748804247"
+        }
+    ]
+}
+
+
+aws ec2 run-instances --image-id ami-f3ac5e8b --security-group-ids sg-594ca524 --count 1 --instance-type t2.micro --subnet-id subnet-0558924d
