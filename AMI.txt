@@ -1,3 +1,6 @@
+
+#AWS EC2 instance
+
 aws ec2 run-instances --image-id ami-f3ac5e8b --count 1 --instance-type t2.micro --key-name MyKeyPair --security-group-ids sg-594ca524 --subnet-id subnet-0558924d
         {
             "Instances": [
